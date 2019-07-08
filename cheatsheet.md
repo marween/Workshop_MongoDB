@@ -1,3 +1,6 @@
+## Lien vers la documentation shell pour MongoDb:
+[Lien](https://docs.mongodb.com/manual/introduction/)
+
 ## Listes des opérateurs:
 |Opérateur|Symbole|Signification|Exemple|
 |:-------|-------|-------|-------|
@@ -21,12 +24,12 @@ db.[dbname].insertMany (
    { <objet> }
 );
 ```
-Il existe aussi la fonction save() pour plus dinfo aller voir la doc.
+Il existe aussi la fonction save() pour plus d'info aller voir la doc.
 
 ## Interroger sa base de données:
 ```
-db.[dbname].findOne()
-db.[dbname].find()
+db.[dbname].findOne({<objet>})
+db.[dbname].find({<objet>})
 ```
 
 ## aggregate()
