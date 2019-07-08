@@ -1,3 +1,4 @@
+
 # Workshop_MongoDB
 
 ## Installation de l'environnement
@@ -14,7 +15,7 @@
  `sudo service mongodb stop`
  
  
- ## lancer le shell:
+ ## Lancer le shell:
  `mongo`
  
  ### Installation de Compas:
@@ -40,8 +41,7 @@
 ### Supprimer la collection:
 `db.user.drop()`
 
-### lien vers la doc
-[doc MongoDB](https://docs.mongodb.com/manual/reference/mongo-shell/)
-
- ### Quelques commandes utiles:
- Voir notre [cheatsheet](./cheatsheet.md)
+# Liens utiles
+[Lien](https://docs.mongodb.com/manual/reference/mongo-shell/) vers la doc MongoDB shell.
+[Lien](https://docs.mongodb.com/manual/introduction/) vers la doc officielle MongoDB.
+Voir aussi notre [cheatsheet](./cheatsheet.md) pour quelques commandes utiles.
