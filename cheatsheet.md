@@ -1,4 +1,4 @@
-## Lien vers la documentation shell pour MongoDb:
+## Lien vers la documentation shell pour MongoDB:
 [Lien](https://docs.mongodb.com/manual/introduction/)
 
 ## Listes des opérateurs:
