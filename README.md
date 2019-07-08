@@ -32,4 +32,5 @@
 ### Montrer toutes les collections de la DB:
  `show collections `
 
- 
+ ### Quelques commandes utiles:
+ Voir notre [cheatsheet](./cheatsheet.md)
