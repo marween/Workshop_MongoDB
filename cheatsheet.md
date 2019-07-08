@@ -1,8 +1,35 @@
-##Interroger sa base de données:
-`db.[dbname].findOne()`
-`db.[dbname].find()`
+## Listes des opérateurs:
+|Opérateur|Symbole|Signification|Exemple|
+|:-------|-------|-------|-------|
+| $gt , $gte | > , ≥ | Plus grand que | "a" : {"$gt" : 10} |
+| $lt , $lte | < , ≤ | Plus petit que | "a" : {"$lt" : 10} | 
+| $ne | ≠ | Différent de | "a" : {"$ne" : 10} |
+| $in , $nin | ∈ , ∉ |  fait partie de | "a" : {"$in" : [10, 12 , 15, 18 ] } |
+| $or | ∨ | OU logique | "a" : {"$or" : [ {"$lt" : 10}, {"$gt" : 10} ] } |
+| $and | ∧ | ET logique | "a" : {"$and" : [ {"$lt" : 10}, {"$gt" : 10} ] } |
+| $not | ¬ | Négation | "a" : {"$not" : {"$lt" : 10} } |
+| $exists | Ǝ | existe | "a" : {"$exists" : 1} |
+| $size | | test sur la taille | "a" : {"$size" : 5} |
 
- 1. aggregate()
+
+
+## Insertion d'élément dans la base de données:
+* Insertion (*insertOne(), insertMany(), insert()*):  
+```
+db.[dbname].insertMany (
+   { <objet> },
+   { <objet> }
+);
+```
+Il existe aussi la fonction save() pour plus dinfo aller voir la doc.
+
+## Interroger sa base de données:
+```
+db.[dbname].findOne()
+db.[dbname].find()
+```
+
+## aggregate()
  
 `db.[dbname].aggregate([])`
  
@@ -16,47 +43,28 @@
 
 `{$unwind : {} }` : Cet opérateur prend une liste de valeur et produit pour chaque élément de la liste un nouveau document en sortie avec cet élément. Il pourrait correspondre à une jointure, à ceci près que celle-ci ne filtre pas les données d’origine, juste un complément qui est imbriqué dans le document. On pourrait le comparer à une jointure externe avec imbrication et listes.
 
- * variables 
+[...]
 
-``` varMatch = { $match : { "grades.0.grade":"C"} };
-varProject = { $project : {"name":1, "borough":1, "_id":0}};
-db.restaurants.aggregate( [ varMatch, varProject ] );
+Pour plus de fonction d'agrégation se réferrer à la doc.
+
+### Les variables 
+``` 
+varMatch = { <aggregate function> };
+varProject = { <aggregate function> };
+db.[dbname].aggregate( [ varMatch, varProject ] );
 ```
-
- * Groupements simples:
-  
- Celui-ci doit contenir obligatoirement une clé de groupement (_id), puis une clé (total) à laquelle on associe la fonction d'agrégation ($sum) :
-
-
-
- * Groupement par valeur:
- 
-  lors de l’exécution on va indiquer qu'il faut utiliser la valeur de la clé pour l'agrégation.
-
-
-
-2. Unwind
-
-l'opérateur $unwind va retirer chaque élémént de la liste. 
-exemple: pour faire la moyenne
-
-
 
 ## Mettre à jour les données
-* update
-```db.restaurants.update (
-   {"grades.grade" : {$not : {$eq : "C"}}},
-   {$set : {"comment" : "acceptable"}}
-);
-
-WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+* Mise à jour (*updateOne(), updateMany(), replaceOne()*):  
 ```
-* remove
-```
-db.restaurants.remove(
-   {"note":0},
-   {"multi" : true}
+db.[dbname].updateMany (
+   { <champsDB: { <operator>: <valeur> } },
+   {$set : {<champsDB> : <valeur>}}
 );
 ```
-* save
-```db.restaurants.save({"_id" : 1, "test" : 1});```
+* Suppression (*remove(), deleteOne(), deleteMany()*) 
+```
+db.[dbname].deleteMany(
+   {<champsDB> : <valeur>}
+);
+```
