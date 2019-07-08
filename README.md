@@ -42,6 +42,8 @@
 `db.user.drop()`
 
 # Liens utiles
-[Lien](https://docs.mongodb.com/manual/reference/mongo-shell/) vers la doc MongoDB shell.
-[Lien](https://docs.mongodb.com/manual/introduction/) vers la doc officielle MongoDB.
+[Lien](https://docs.mongodb.com/manual/reference/mongo-shell/) vers la doc MongoDB shell. 
+
+[Lien](https://docs.mongodb.com/manual/introduction/) vers la doc officielle MongoDB. 
+
 Voir aussi notre [cheatsheet](./cheatsheet.md) pour quelques commandes utiles.
