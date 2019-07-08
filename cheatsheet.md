@@ -1,6 +1,3 @@
-## Lien vers la documentation shell pour MongoDB:
-[Lien](https://docs.mongodb.com/manual/introduction/)
-
 ## Listes des opérateurs:
 |Opérateur|Symbole|Signification|Exemple|
 |:-------|-------|-------|-------|
