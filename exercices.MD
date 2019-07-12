@@ -1,9 +1,9 @@
 # Exercices MongoDB:
 
-*  <u>Exercice 1</u>: Crée une base de donnée intitulée 'musiques' dans laquelle on retrouvera:
+*  Exercice 1: Crée une base de donnée intitulée 'musiques' dans laquelle on retrouvera:
 
-- les donnéees de l'albums (titre, score et genre)
-- les donnéees de l'auteur (nom, score, label)
+- les données de l'albums (titre, score et genre)
+- les données de l'auteur (nom, score, label)
 - les données du genre (nom)
 - les données de la musique évidemment (titre, année, durée)
 
@@ -20,46 +20,46 @@
   "genre" : 
     [ 
       { 
-		"nom" : "Pop"
-	  }, 
+		    "nom" : "Pop"
+	    }, 
       { 
-		"nom" : "Rock" 
-	  }
+		    "nom" : "Rock" 
+	    }
     ],
   "auteurs":
     [ 
       {
         "nom": "Michel",
         "score": 5,
-		"label": "Epitaph Records"
+		    "label": "Epitaph Records"
       },
       {
         "nom":"Bob",
         "score": 6,
-		"label": "SoloLearn"
+		    "label": "SoloLearn"
       }
     ],
   "albums":
     [
-		{
-		  "titre" : "Super Album",
-		  "score" : 5,
-		  "genre" : ["Metalcore"]
-		}
-	]
+      {
+        "titre" : "Super Album",
+        "score" : 5,
+        "genre" : ["Metalcore"]
+      }
+	  ]
 }
 ```
 </details>
 
-* <u>Exercice 2</u>: Voici une DB déjà remplie, 
+* Exercice 2: Voici une DB déjà remplie, 
  
   * Crée une nouvelles DB workshop_musique 
   * Importe la collection via compas 
   * Ajoute une entrée dans la collection 
  
  
-* <u>Exercice 3</u>: Trouves les musiques dont le score est plus grand que 5 et donc l'albums a recu plus de 8
+* Exercice 3: Trouves les musiques dont le score est plus grand que 5 et donc l'albums a recu plus de 8
 
-* <u>Exercice 4</u>: Calcul de moyenne des album de tel 'machin'
+* Exercice 4: Calcul de moyenne des album de tel 'machin'
 
-* <u>Exercice 5</u>: Compare la moyenne de l'auteur 'machin' avec l'ensemble de ses albums. 
+* Exercice 5: Compare la moyenne de l'auteur 'machin' avec l'ensemble de ses albums. 

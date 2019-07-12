@@ -47,3 +47,5 @@
 [Lien](https://docs.mongodb.com/manual/introduction/) vers la doc officielle MongoDB. 
 
 Voir aussi notre [cheatsheet](./cheatsheet.md) pour quelques commandes utiles.
+
+Et pour les âmes perdues vous pouvez vous référer à ce [lien](https://www.tutorialspoint.com/mongodb/)
