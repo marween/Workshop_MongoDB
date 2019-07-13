@@ -38,7 +38,11 @@ db.createCollection('musique')
     {
       "titre" : "Deathgrip",
       "score" : 8,
-      "genre" : ["Metalcore"]
+      "genre" : [
+        { 
+          "nom" : "Metalcore"
+        }
+      ]
     }
   ]
 }
@@ -85,7 +89,11 @@ db.musiques.insert({
     {
       titre : "Deathgrip",
       score : 8,
-      genre : ["Metalcore"]
+      genre : [
+        { 
+          nom :"Metalcore"
+        }
+      ]
     }
   ]
 })
