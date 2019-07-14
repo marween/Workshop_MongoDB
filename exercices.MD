@@ -2,7 +2,7 @@
 
 *  Exercice 1: 
 
-Crée une base de donnée workshop et la collection intitulée 'musique' dans cette dernière db, on retrouvera dedans:
+Crée une base de donnée workshop et la collection intitulée 'musique' dans cette dernière db, on retrouvera:
 
 - les données de l'albums (titre, score et genre)
 - les données de l'auteur (nom, score, label)
