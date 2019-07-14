@@ -102,11 +102,11 @@ db.musiques.insert({
 
 * Exercice 4: 
 
-Trouves les musiques dont le score est plus grand que 5 et donc l'albums a recu plus de 8
+Trouves les musiques dont le score est plus grand que 5 et dont l'album a recu un score de plus de 8
 
 * Exercice 5: 
 
-Calcul de moyenne des album de tel 'machin'
+Calcul la moyenne des albums de 'machin'
 
 * Exercice 6: 
 
