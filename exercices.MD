@@ -12,12 +12,15 @@ Crée une base de donnée workshop et la collection intitulée 'musique' dans ce
 *Ecrivez le json de la structure de la collection. Vérifier avec notre solution et si vous avez des questions appelez-nous.*
 
 <details>
+
 <summary>Solution:</summary>
-```
+
+<pre><code>
 use workshop
 db.createCollection('musique')
-```
-```json
+</code></pre>
+
+<pre><code>
 { 
   "titre" : "Deathgrip",
   "année" : "2016",
@@ -46,19 +49,25 @@ db.createCollection('musique')
     }
   ]
 }
-```
+</code></pre>
+
 </details>
+
 * Exercice 2: 
 
 Nous allons faire une base de données avec plusieurs musiques. Donc il se serait préférable de l'appeler 'musiques'.
 Renomme la base de données.
 
 <details>
+
 <summary>Solution:</summary>
-```
+
+<pre><code>
 db.musique.renameCollection("musiques", true)
-```
+</code></pre>
+
 </details>
+
 * Exercice 3: 
 
 Voici une DB déjà remplie, 
@@ -68,7 +77,7 @@ Voici une DB déjà remplie,
  
 <details>
 <summary>Solution:</summary>
-```
+<pre><code>
 db.musiques.insert({ 
   titre : "Deathgrip",
   année : "2016",
@@ -97,7 +106,7 @@ db.musiques.insert({
     }
   ]
 })
-```
+</code></pre>
 </details>
 
 * Exercice 4: 
@@ -108,6 +117,7 @@ Trouves les musiques dont le score est plus grand que 6 et dont l'album a recu u
 <summary>Solution:</summary>
 
 ` db.musiques.find({ $and: [ { "auteurs.score": {$gte:6} }, { "albums.score":5 } ] } ).pretty()`
+
 </details>
 
 * Exercice 5: 
