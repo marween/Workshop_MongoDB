@@ -109,7 +109,18 @@ db.musiques.insert({
 </code></pre>
 </details>
 
-* Exercice 4: 
+* Exercice 4:
+
+Un troll est passé dans notre db et a rajouté 'La Danse des Canards'. Supprimons cette chose avant d'avoir l'envie de la danser.
+
+<details>
+<summary>Solution :</summary>
+
+` db.musiques.remove( {"titre": "La Danse Des Canards"} ) `
+
+</details>
+
+* Exercice 5: 
 
 Trouves les musiques dont le score est plus grand que 6 et dont l'album a recu un score de 5
 
@@ -120,10 +131,10 @@ Trouves les musiques dont le score est plus grand que 6 et dont l'album a recu u
 
 </details>
 
-* Exercice 5: 
+* Exercice 6: 
 
 Calcul la moyenne des albums de 'machin'
 
-* Exercice 6: 
+* Exercice 7: 
 
 Compare la moyenne de l'auteur 'machin' avec l'ensemble de ses albums. 
