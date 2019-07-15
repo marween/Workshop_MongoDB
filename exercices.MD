@@ -108,6 +108,7 @@ Trouves les musiques dont le score est plus grand que 6 et dont l'album a recu u
 <summary>Solution:</summary>
 
 ` db.musiques.find({ $and: [ { "auteurs.score": {$gte:6} }, { "albums.score":5 } ] } ).pretty()`
+</details>
 
 * Exercice 5: 
 
