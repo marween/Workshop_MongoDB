@@ -102,7 +102,12 @@ db.musiques.insert({
 
 * Exercice 4: 
 
-Trouves les musiques dont le score est plus grand que 5 et dont l'album a recu un score de plus de 8
+Trouves les musiques dont le score est plus grand que 6 et dont l'album a recu un score de 5
+
+<details>
+<summary>Solution:</summary>
+
+` db.musiques.find({ $and: [ { "auteurs.score": {$gte:6} }, { "albums.score":5 } ] } ).pretty()`
 
 * Exercice 5: 
 
