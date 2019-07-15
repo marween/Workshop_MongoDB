@@ -14,14 +14,10 @@ Crée une base de donnée workshop et la collection intitulée 'musique' dans ce
 <details>
 
 <summary>Solution:</summary>
-
-<pre><code>
-use workshop
+<pre><code>use workshop
 db.createCollection('musique')
 </code></pre>
-
-<pre><code>
-{ 
+<pre><code>{ 
   "titre" : "Deathgrip",
   "année" : "2016",
   "durée" : "4 : 24",
@@ -61,9 +57,7 @@ Renomme la base de données.
 <details>
 
 <summary>Solution:</summary>
-
-<pre><code>
-db.musique.renameCollection("musiques", true)
+<pre><code>db.musique.renameCollection("musiques", true)
 </code></pre>
 
 </details>
@@ -77,8 +71,7 @@ Voici une DB déjà remplie,
  
 <details>
 <summary>Solution:</summary>
-<pre><code>
-db.musiques.insert({ 
+<pre><code>db.musiques.insert({ 
   titre : "Deathgrip",
   année : "2016",
   durée : "4 : 24",
@@ -135,6 +128,20 @@ Trouves les musiques dont le score est plus grand que 6 et dont l'album a recu u
 
 Calcul la moyenne des albums de 'machin'
 
+<details>
+<summary>Solution:</summary>
+
+` `
+
+</details>
+
 * Exercice 7: 
 
 Compare la moyenne de l'auteur 'machin' avec l'ensemble de ses albums. 
+
+<details>
+<summary>Solution:</summary>
+
+` `
+
+</details>
