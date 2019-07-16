@@ -72,28 +72,28 @@ Voici une DB déjà remplie,
 <details>
 <summary>Solution:</summary>
 <pre><code>db.musiques.insert({ 
-  titre : "Deathgrip",
+  titre : "Title",
   année : "2016",
   durée : "4 : 24",
   genre : [ 
     { 
-      nom : "Metalcore"
+      nom : "Genre"
     }
   ],
   auteurs: [ 
     {
-      nom: "Fit For A King",
+      nom: "Artist Name",
       score: 8,
-      label: "Solid State"
+      label: "Label"
     }
   ],
   albums: [
     {
-      titre : "Deathgrip",
+      titre : "Album Title",
       score : 8,
       genre : [
         { 
-          nom :"Metalcore"
+          nom :"Genre"
         }
       ]
     }
@@ -126,22 +126,29 @@ Trouves les musiques dont le score est plus grand que 6 et dont l'album a recu u
 
 * Exercice 6: 
 
-Calcul la moyenne des albums de 'machin'
+Calcul la moyenne des albums de 'Fit For A King'
 
 <details>
 <summary>Solution:</summary>
 
-` `
+<pre><code> 
+varMatch = {$match : {"auteurs.nom":"Fit For A King"}};
+varAvg = {$avg : "$albums.score"};
+varGroup = { $group : {"_id" : "Fit For A King albums", "moyenne" : varAvg } };
+db.musiques.aggregate([ varMatch, varGroup ]);
+</code></pre>
 
 </details>
 
 * Exercice 7: 
 
-Compare la moyenne de l'auteur 'machin' avec l'ensemble de ses albums. 
+Compare le score de l'auteur 'Fit For A King' avec l'ensemble de ses albums. 
 
 <details>
 <summary>Solution:</summary>
 
-` `
+<pre><code> 
+
+</code></pre>
 
 </details>

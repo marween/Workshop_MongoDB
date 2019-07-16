@@ -16,7 +16,6 @@ sudo apt-get install -y mongodb-org
 `sudo service mongod start`
 `sudo service mongod stop`
 
-
 ## Lancer le shell:
 
 `mongo`
