@@ -133,22 +133,34 @@ Calcul la moyenne des albums de 'Fit For A King'
 
 <pre><code> 
 varMatch = {$match : {"auteurs.nom":"Fit For A King"}};
+varUnwind = { $unwind : {path : "$albums"}};
 varAvg = {$avg : "$albums.score"};
 varGroup = { $group : {"_id" : "Fit For A King albums", "moyenne" : varAvg } };
-db.musiques.aggregate([ varMatch, varGroup ]);
+db.musiques.aggregate([ varMatch, varUnwind, varGroup ]);
 </code></pre>
 
 </details>
 
 * Exercice 7: 
 
-Compare le score de l'auteur 'Fit For A King' avec l'ensemble de ses albums. 
+Nous voudrions comparer le score de l'auteur 'Fit For A King' avec l'ensemble de ses albums. Affichez le score à l'écran. Si vous êtes motivé tenter avec le comparateur. 
 
 <details>
 <summary>Solution:</summary>
 
 <pre><code> 
+varMatch = {$match : {"auteurs.nom":"Fit For A King"}};
+varUnwind = { $unwind : {path : "$albums"}};
+varAvg = {$avg : "$albums.score"};
+varGroup = { $group : {"_id" : "Fit For A King albums", "moyenne" : varAvg } };
 
+varAgg1 = db.musiques.aggregate([ varMatch, varUnwind, varGroup ]).toArray()[0]["moyenne"];
+varAgg2 = db.musiques.aggregate([varMatch]).toArray()[0]["auteurs"][0]["score"];
+
+
+varCmp = { $cmp : [ varAgg1, varAgg2]};
+db.musiques.aggregate( [ { $project: { cmpToArt: varCmp } } ] );
 </code></pre>
 
 </details>
+
