@@ -62,3 +62,5 @@ port: 27017
 Voir aussi notre [cheatsheet](./cheatsheet.md) pour quelques commandes utiles.
 
 Et pour les âmes perdues vous pouvez vous référer à ce [lien](https://www.tutorialspoint.com/mongodb/)
+
+[Lien](https://docs.google.com/presentation/d/1SB_gwQOgAcbxWhU5pZV8jKJbeguC1OU5cLFj7BOJklA/edit?usp=sharing) vers les slides.
