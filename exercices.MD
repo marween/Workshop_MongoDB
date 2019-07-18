@@ -115,7 +115,7 @@ Un troll est passé dans notre db et a rajouté 'La Danse des Canards'. Supprimo
 
 * Exercice 5: 
 
-Trouves les musiques dont le score de l'auteur est plus grand que 6 et dont l'album a recu un score de 5
+Trouves les musiques dont le score de l'auteur est d'au moins de 6 et dont l'album a recu un score de 5
 
 <details>
 <summary>Solution:</summary>
