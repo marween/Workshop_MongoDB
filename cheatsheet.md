@@ -16,7 +16,7 @@
 ## Insertion d'élément dans la base de données:
 * Insertion (*insertOne(), insertMany(), insert()*):  
 ```
-db.[dbname].insertMany (
+db.[collection].insertMany (
    { <objet> },
    { <objet> }
 );
@@ -25,13 +25,13 @@ Il existe aussi la fonction save() pour plus d'info aller voir la doc.
 
 ## Interroger sa base de données:
 ```
-db.[dbname].findOne({<objet>})
-db.[dbname].find({<objet>})
+db.[collection].findOne({<objet>})
+db.[collection].find({<objet>})
 ```
 
 ## aggregate()
  
-`db.[dbname].aggregate([])`
+`db.[collection].aggregate([])`
  
 `{$match : {} }` : C’est le plus simple, il correspond au premier paramètre de la requête find.Il permet donc de filtrer le contenu d’une collection.
 
@@ -51,20 +51,20 @@ Pour plus de fonction d'agrégation se réferrer à la doc.
 ``` 
 varMatch = { <aggregate function> };
 varProject = { <aggregate function> };
-db.[dbname].aggregate( [ varMatch, varProject ] );
+db.[collection].aggregate( [ varMatch, varProject ] );
 ```
 
 ## Mettre à jour les données
 * Mise à jour (*updateOne(), updateMany(), replaceOne()*):  
 ```
-db.[dbname].updateMany (
+db.[collection].updateMany (
    { <champsDB: { <operator>: <valeur> } },
    {$set : {<champsDB> : <valeur>}}
 );
 ```
 * Suppression (*remove(), deleteOne(), deleteMany()*) 
 ```
-db.[dbname].deleteMany(
+db.[collection].deleteMany(
    {<champsDB> : <valeur>}
 );
 ```
