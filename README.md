@@ -53,6 +53,10 @@ port: 27017
 
 `db.user.drop()`
 
+# Exercices
+
+Vous trouverez les exercices [ici](./exercices.MD)
+
 # Liens utiles
 
 [Lien](https://docs.mongodb.com/manual/reference/mongo-shell/) vers la doc MongoDB shell. 
