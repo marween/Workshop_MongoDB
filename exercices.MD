@@ -64,7 +64,7 @@ Renomme la base de données.
 
 * Exercice 3: 
 
-Voici une DB déjà remplie, 
+[Voici](./database.json) une DB déjà remplie, 
  
   * Importe la collection via compas 
   * Ajoute une entrée dans la collection 
